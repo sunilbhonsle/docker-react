@@ -1,8 +1,8 @@
-# My first traverse file
+# My first traverse file I  am writing
 sudo: required
 services:
-        -docker
+        - docker
 before_install:
-        -dockerbuild -t vaishnavi1/docker-react -f Dockerfile.dev .
+        - docker build -t vaishnavi1/docker-react -f Dockerfile.dev .
 script:
-        -docker run -e CI=true vaishnavi1/docker-react npm run test
+        - docker run -e CI=true vaishnavi1/docker-react npm run test
